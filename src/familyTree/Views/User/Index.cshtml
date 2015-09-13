@@ -1,0 +1,23 @@
+﻿﻿@model IList<familyTree.Model.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>User Index</h2>
+
+<p>
+  @foreach (var user in Model)
+  {
+    <div class="item">
+      <span class="id">
+        @user.rowId
+      </span>
+      <span class="email">
+        @user.email
+      </span>
+      <span class="addedDate">
+        @user.addedDate
+      </span>
+    </div>
+  }
+</p>
